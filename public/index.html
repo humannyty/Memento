@@ -1,0 +1,35 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>memento</title>
+<meta name="theme-color" content="#f3e4e6">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="memento">
+<link rel="apple-touch-icon" href="/icon-180.png">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/app.css">
+</head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<filter id="wcf" x="-20%" y="-20%" width="140%" height="140%">
+ <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="7" result="n"/>
+ <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+ <feGaussianBlur stdDeviation="0.6"/>
+</filter></defs></svg>
+<img class="bgfix" src="/art/bg.jpg" alt="">
+<div class="veilfix"></div>
+<main id="app"></main>
+<nav id="nav" class="appnav" hidden>
+ <a href="#/" data-r="home"><svg width="22" height="18" viewBox="0 0 22 18" fill="none" stroke="currentColor" stroke-width="1.1"><rect x="1.5" y="3" width="13" height="13" rx="1" transform="rotate(-6 8 9.5)"/><rect x="7" y="1.5" width="13" height="13" rx="1" fill="#faf4ea" transform="rotate(5 13.5 8)"/></svg>Mementos</a>
+ <a href="#/make" class="make" data-r="make"><span class="dot">+</span>Today’s memento</a>
+ <a href="#/journeys" data-r="journeys"><svg width="22" height="18" viewBox="0 0 22 18" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"><circle cx="3" cy="14" r="1.6"/><circle cx="19" cy="4" r="1.6"/><path d="M4.6 13C9 12 8 6 12 6.5s4-2 5.4-2" stroke-dasharray="1.5 2.2"/></svg>Journeys</a>
+</nav>
+<div id="toast" class="toast" hidden></div>
+<div id="layer"></div>
+<script src="/app.js"></script>
+</body></html>

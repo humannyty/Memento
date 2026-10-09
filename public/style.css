@@ -1,0 +1,45 @@
+:root{
+  --ink:#33243a; --plum:#6b4b6c; --plum-soft:#8a6d8b; --gold:#a8834a; --gold-l:#c9a86a;
+  --cream:#faf4ea; --paper:#fdf9f2; --rose:#e9c4c6; --peach:#f2d2bd; --lav:#d8cde6; --teal:#a8cdc6;
+  --hair:rgba(110,80,110,.22);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:390px;height:844px;overflow:hidden;background:var(--cream)}
+body{font-family:'Jost',sans-serif;font-weight:300;color:var(--ink);-webkit-font-smoothing:antialiased}
+.screen{position:relative;width:390px;height:844px;overflow:hidden}
+.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 40%;z-index:0}
+.veil{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(252,247,240,.12) 0%,rgba(252,247,240,.38) 28%,rgba(252,247,240,.6) 65%,rgba(252,247,240,.82) 100%)}
+.content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;padding:0 24px}
+.status{height:47px;display:flex;align-items:center;justify-content:space-between;padding:6px 6px 0 10px;font:500 15px 'Jost';color:var(--ink);flex:none}
+.status svg{display:block}
+.home-ind{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:134px;height:5px;border-radius:3px;background:var(--ink);opacity:.8;z-index:5}
+.serif{font-family:'Cormorant Garamond',serif}
+.sc{font-family:'Jost';font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:400;color:var(--gold)}
+.sc.plum{color:var(--plum)}
+h1{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:40px;line-height:1;letter-spacing:-.005em;color:var(--ink)}
+h1 em{font-style:italic;font-weight:400}
+.hair{height:1px;background:var(--hair);border:0}
+.topbar{display:flex;align-items:center;justify-content:space-between;height:44px;flex:none}
+.iconbtn{width:36px;height:36px;display:flex;align-items:center;justify-content:center;color:var(--plum)}
+
+/* paper cards */
+.card{background:var(--paper);padding:9px 9px 0;box-shadow:0 1px 2px rgba(60,35,60,.08),0 12px 28px -6px rgba(70,40,70,.22);border-radius:2px;position:relative}
+.card .photo{display:block;width:100%;object-fit:cover;border-radius:1px}
+.card .meta{display:flex;justify-content:space-between;align-items:baseline;padding:8px 2px 9px;font-size:11px;color:var(--plum)}
+.card .meta .from{font-family:'Cormorant Garamond';font-style:italic;font-size:14px;color:var(--ink)}
+.count{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:400;white-space:nowrap}
+.count b{font-weight:500}
+.joke{font-family:'Cormorant Garamond';font-weight:500;font-style:italic;color:var(--ink);line-height:1.22}
+.btn{display:flex;align-items:center;justify-content:center;height:52px;border-radius:26px;font:400 13px 'Jost';letter-spacing:.16em;text-transform:uppercase}
+.btn.primary{background:var(--ink);color:#fbf3e8;box-shadow:0 8px 20px -8px rgba(51,36,58,.6)}
+.btn.ghost{border:1px solid rgba(51,36,58,.45);color:var(--ink);background:rgba(253,249,242,.55)}
+.link{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--plum)}
+/* watercolour initials */
+.wc{position:relative;width:54px;height:54px;display:flex;align-items:center;justify-content:center}
+.wc::before{content:"";position:absolute;inset:0;border-radius:52% 48% 55% 45%/47% 55% 45% 53%;filter:url(#wcf);opacity:.92}
+.wc span{position:relative;font-family:'Cormorant Garamond';font-size:23px;font-weight:500;color:var(--ink)}
+.wc.rose::before{background:radial-gradient(circle at 38% 35%,#f6dfdc 0,#e7b9bd 55%,#d9a2a9 100%)}
+.wc.teal::before{background:radial-gradient(circle at 40% 35%,#dcefe9 0,#aed3cc 55%,#8dbcb4 100%)}
+.wc.lav::before{background:radial-gradient(circle at 40% 35%,#ece6f3 0,#cfc2e2 55%,#b6a5d0 100%)}
+.wc.peach::before{background:radial-gradient(circle at 40% 35%,#fbe8da 0,#f1cdb4 55%,#e6b493 100%)}
+.wc.gold::before{background:radial-gradient(circle at 40% 35%,#f7ecd4 0,#e6d1a4 55%,#d4b77e 100%)}
